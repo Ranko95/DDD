@@ -1,5 +1,6 @@
 DROP DATABASE IF EXISTS example;
 DROP USER IF EXISTS marcus;
-CREATE USER marcus WITH PASSWORD 'marcus';
+CREATE USER marcus WITH CREATEDB PASSWORD 'marcus';
+GRANT marcus to postgres;
 CREATE DATABASE example OWNER marcus;
 
