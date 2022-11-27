@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "properties": {
+    "login": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 64
+    },
+    "password": {
+      "type": "string",
+      "$comment": "Password hash"
+    },
+    "role": {
+      "$ref": "./Role.json"
+    }
+  },
+  "required": ["login", "password"]
+}
